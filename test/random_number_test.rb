@@ -1,6 +1,5 @@
 require './test_helper'
 require './lib/random_number'
-require 'pry'
 
 class RandomNumberTest < Minitest::Test
   def setup
@@ -14,8 +13,6 @@ class RandomNumberTest < Minitest::Test
   end
 
   def test_random_number_can_be_generated
-    # binding.pry
-    # assert_equal "01234".length, RandomNumber.generate.length
     assert_equal "01234".length, @random.generate.length
   end
 
