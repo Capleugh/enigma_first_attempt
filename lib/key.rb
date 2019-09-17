@@ -1,4 +1,4 @@
-require './lib/randomable'
+require './module/randomable'
 
 class Key
   include Randomable
