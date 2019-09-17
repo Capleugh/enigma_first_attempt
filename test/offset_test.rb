@@ -16,5 +16,7 @@ class OffsetTest < Minitest::Test
     assert_equal "170919".length, @offset.generate.length
   end
 
-
+  def test_date_can_be_squared
+    assert_equal 29_213_304_561, @offset.square("170919")
+  end
 end

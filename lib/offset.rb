@@ -7,5 +7,8 @@ class Offset
     @offset = offset
   end
 
-
+  def square(date)
+    date.to_i * date.to_i
+    # require 'pry'; binding.pry
+  end
 end
