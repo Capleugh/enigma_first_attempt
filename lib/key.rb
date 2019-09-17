@@ -11,7 +11,7 @@ class Keys
   def split(random_number)
     random = []
     random_number.chars.each_cons(2) do |number|
-      random << number[0] + number[1]
+      random << number[0] + number[1] 
       # require 'pry'; binding.pry
     end
     random
