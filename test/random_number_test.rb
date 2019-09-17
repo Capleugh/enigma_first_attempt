@@ -1,11 +1,13 @@
 require './test_helper'
 require './lib/random_number'
+# require 'pry'
 
 class RandomNumberTest < Minitest::Test
   def setup
     @random = RandomNumber.new
     @r2 = RandomNumber.new.num
-    # when instantiating a default random number, this allows you to access just the number in a string instead of an entire object.
+    # when instantiating a default random number, this allows you to access just the number in the form of a string instead of an entire object.
+    # binding.pry
   end
 
   def test_it_exists
