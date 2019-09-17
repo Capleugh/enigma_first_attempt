@@ -1,13 +1,12 @@
 require './test_helper'
-require './lib/random_number'
+require './lib/randomable'
 require './lib/key'
 
 
 class KeysTest < Minitest::Test
   def setup
-    @random = RandomNumber.new
-    @r2 = RandomNumber.new.num
     @key =Key.new
+    @key = Key.new("02715")
   end
 
   def test_it_exists
