@@ -1,23 +1,22 @@
-require './lib/random_number'
+require './lib/randomable'
 
 class Key
+  include Randomable
 
-  def initialize
-    @number = RandomNumber.new.num
+  def initialize(key = generate)
+    @key = key
   end
 
-  def split(random_number = @number)
-    random = []
+  def split(random_number)
+    number_split = []
     random_number.chars.each_cons(2) do |number|
-      random << number[0] + number[1]
-      # require 'pry'; binding.pry
+      number_split << number[0] + number[1]
     end
-    random
+    number_split
   end
 
-  def generate_key(random_number = @number)
-    key_hash = {
-      # come back and check out why this is yelling at you
+  def generate_key(random_number)
+    @key = {
       A: split(random_number)[0],
       B: split(random_number)[1],
       C: split(random_number)[2],
