@@ -14,12 +14,6 @@ class KeysTest < Minitest::Test
     assert_instance_of Key, @key
   end
 
-  # def test_initialize
-  #   # @key.instance_variable_set(:@number, "02715")
-  #   assert_equal "02715", @key.number
-  #   # mock this number?
-  # end
-
   def test_random_number_can_be_split
     expected = ["02", "27", "71", "15"]
 
