@@ -23,7 +23,7 @@ class EncryptorTest < Minitest::Test
     assert_equal [], @encryptor.shift
   end
 
-  def test_key_can_be_added
+  def test_objects_to_be_shifted_can_be_added
     @encryptor.add_key_offset(@key)
     @encryptor.add_key_offset(@offset)
 
