@@ -21,6 +21,13 @@ class Offset
     last_four_digits.chars
   end
 
-  # def generate_offset(last_four_digits)
-  # end
+  def generate_offset(last_four_digits)
+    @offsets = {
+      A: split(last_four_digits)[0],
+      B: split(last_four_digits)[1],
+      C: split(last_four_digits)[2],
+      D: split(last_four_digits)[3],
+    }
+
+  end
 end
