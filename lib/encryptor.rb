@@ -17,7 +17,12 @@ class Encryptor
 
   def add_key_offset(key_offset)
     @shift << key_offset
-    require 'pry'; binding.pry
   end
 
+  def combine
+    @shift.sum do |element|
+      element[0]
+      # this only gives me the first value for obvious reasons, but I couldn't figure out how to snag all of them
+    end
+  end
 end

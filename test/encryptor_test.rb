@@ -4,7 +4,6 @@ require './lib/offset'
 require './lib/encryptor'
 require './module/randomable'
 require './module/dateable'
-# require './module/shiftable'
 
 class EncryptorTest < Minitest::Test
   def setup
@@ -30,20 +29,11 @@ class EncryptorTest < Minitest::Test
     assert_equal [@key, @offset], @encryptor.shift
   end
 
-  # def test_key_and_offset_values_can_be_converted_to_array
-  #   expected = ["06", "32", "77", "16"]
-  #
-  #   assert_equal expected, @encryptor.shift
-  # end
+  def test_arrays_can_be_added_by_index
+    @encryptor.add_key_offset(@key)
+    @encryptor.add_key_offset(@offset)
+    expected = [6, 32, 77, 16]
 
-  # def test_key_can_be_added_to_offset
-  #   expected = {
-  #       A: "06",
-  #       B: "32",
-  #       C: "77",
-  #       D: "16",
-  #     }
-  #
-  #   assert_equal expected, @encryptor.shift
-  # end
+    assert_equal expected, @encryptor.combine
+  end
 end
