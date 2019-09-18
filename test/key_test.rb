@@ -31,16 +31,4 @@ class KeysTest < Minitest::Test
 
     assert_equal expected, @key_2.convert
   end
-
-  # def test_keys_can_be_generated_from_random_number
-  #   expected = {
-  #     A: "02",
-  #     B: "27",
-  #     C: "71",
-  #     D: "15",
-  #   }
-  #
-  #   assert_equal expected, @key_2.generate_key("02715")
-  # end
-
 end

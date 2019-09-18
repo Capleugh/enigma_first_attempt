@@ -14,7 +14,6 @@ class Key
       key_split << number[0] + number[1]
     end
     key_split
-    # require 'pry'; binding.pry
   end
 
   def convert
@@ -22,15 +21,4 @@ class Key
       number.to_i
     end
   end
-
-
-
-  # def generate_key(random_number)
-  #   @key = {
-  #     A: split[0],
-  #     B: split[1],
-  #     C: split[2],
-  #     D: split[3],
-  #   }
-  # end
 end
