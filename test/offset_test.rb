@@ -29,20 +29,25 @@ class OffsetTest < Minitest::Test
     assert_equal "4561", @offset_2.last_four(29_213_304_561)
   end
 
-  def test_last_four_digits_can_be_split
+  def test_last_four_digits_can_generate_offset
     expected = ["4", "5", "6", "1"]
-
-    assert_equal expected, @offset_2.split("4561")
-  end
-
-  def test_offset_can_be_generated_by_random_number
-    expected = {
-      A: "4",
-      B: "5",
-      C: "6",
-      D: "1",
-    }
 
     assert_equal expected, @offset_2.generate_offset("4561")
   end
+
+  # def test_offset_can_be_converted_from_string_to_i
+  #   expected = [4, 5, 6, 1]
+  #   assert_equal expected, @offset_2.convert
+  # end
+
+  # def test_offset_can_be_generated_by_random_number
+  #   expected = {
+  #     A: "4",
+  #     B: "5",
+  #     C: "6",
+  #     D: "1",
+  #   }
+  #
+  #   assert_equal expected, @offset_2.generate_offset("4561")
+  # end
 end
