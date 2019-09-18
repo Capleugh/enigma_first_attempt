@@ -1,10 +1,8 @@
 require './module/randomable'
 require './module/dateable'
 require './lib/key'
-# require './module/shiftable'
 
 class Encryptor
-  # include Shiftable
   include Randomable
   include Dateable
 
